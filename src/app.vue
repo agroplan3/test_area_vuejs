@@ -1,42 +1,33 @@
 <template>
-  <div id="app" class="uk-container uk-container-center uk-text-center uk-margin-large-top">
-    <h1 class="uk-animation-slide-top">{{ msg }}</h1>
+  <div id="app">
 
-    <ul class="uk-subnav uk-flex-center">
-  
-      <button style="padding:0px" class="uk-button uk-button-default uk-animation-slide-top">
-          <a href="https://google.com" target="_blank">
-            <img style="width:100px; height:100px" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg">
-          </a>
-          <span class="uk-label">Go To Google.com</span>
-      </button>
+    <div class="uk-card uk-card-secondary">
+        <img class="uk-align-left" style="width:30px; height:30px" src="./assets/images/VueJs.png">
+          <span class="uk-text-large uk-text-default">VueJs App</span>
+        <img class="uk-align-right" style="width:30px; height:30px" src="./assets/images/VueJs.png">
 
-      <button style="padding:0px" class="uk-button uk-button-default uk-animation-slide-top">
-          <a href="https://github.com" target="_blank">
-            <img style="width:100px; height:100px" src="https://image.flaticon.com/icons/png/512/25/25231.png">
-          </a>
-          <span class="uk-label">Go To Github.com</span>
-      </button>
+    </div>
 
-    </ul>
-
-  <vk-button v-on:click="customFunc">Vuikit Button</vk-button>
-
+    <router-view/>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'app',
-    methods: {
-    customFunc: function () {
-      alert("Yes, this is working!")
-    }
-  },
-  data () {
-    return {
-      msg: 'Test Vue Uikit App'
-    }
-  }
+<style>
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
 }
-</script>
+#nav {
+  padding: 30px;
+}
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
+</style>
