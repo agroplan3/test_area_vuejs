@@ -1,22 +1,20 @@
 <template>
   <div id="home" class="uk-container uk-container-center uk-text-center">
-    <h1 class="uk-animation-slide-top uk-text-primary">{{ msg }}</h1>
+    <h1 class="uk-animation-slide-top uk-text-danger">{{ msg }}</h1>
 
     <ul class="uk-subnav uk-flex-center">
 
-      <button style="padding:0px" class="uk-button uk-button-secondary uk-animation-slide-top">
-          <a href="https://google.com">
-            <img style="width:100px; height:100px" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg">
-          </a>
-          <span class="uk-label">Go To Google.com</span>
-      </button>
+    <div class="uk-margin-small">
+      <div class="uk-button-group">
+        <router-link :to="{name: 'login'}">
+          <button id="goToLogin_btn" class="uk-button uk-button-primary uk-animation-slide-top">Login</button>
+        </router-link>
 
-      <button style="padding:0px" class="uk-button uk-button-secondary uk-animation-slide-top">
-          <a href="https://github.com">
-            <img style="width:100px; height:100px" src="https://image.flaticon.com/icons/png/512/25/25231.png">
-          </a>
-          <span class="uk-label">Go To Github.com</span>
-      </button>
+        <router-link :to="{name: 'signUp'}">
+          <button id="goToSignUp_btn" class="uk-button uk-button-primary uk-animation-slide-top uk-margin-small-left">SignUp</button>
+        </router-link>           
+      </div>
+    </div>
 
     </ul>
 

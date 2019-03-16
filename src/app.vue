@@ -1,11 +1,8 @@
 <template>
   <div id="app">
 
-    <div class="uk-card uk-card-secondary">
-        <img class="uk-align-left" style="width:30px; height:30px" src="./assets/images/VueJs.png">
-          <span class="uk-text-large uk-text-default">VueJs App</span>
-        <img class="uk-align-right" style="width:30px; height:30px" src="./assets/images/VueJs.png">
-
+    <div class="uk-card uk-card-primary">
+      <div id="Header">VJS APP</div>
     </div>
 
     <router-view/>
@@ -18,7 +15,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 #nav {
   padding: 30px;
@@ -29,5 +25,10 @@
 }
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+#Header {
+  color:rgb(255, 255, 255);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
 }
 </style>
